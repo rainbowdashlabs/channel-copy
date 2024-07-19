@@ -12,8 +12,14 @@ repositories {
     maven("https://eldonexus.de/repository/maven-proxies")
 }
 
+java{
+    toolchain{
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
+
 dependencies {
-    implementation("de.chojo", "cjda-util", "2.8.5+beta.5") {
+    implementation("de.chojo", "cjda-util", "2.9.8+jda-5.0.0") {
         exclude(group = "club.minnced", module = "opus-java")
     }
 
